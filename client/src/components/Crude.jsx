@@ -45,6 +45,31 @@ const handleDelete = () => {
   
   return (
     <>
+    {popup && (
+      <div className='popup-overflow'>
+            <div className='popup'>
+              <form onSubmit={handleSubmit} >
+                <div className='border-2'>
+                  <div className='input-element'>
+                    <div>Name:</div>
+                    <input className='input-width' type='text' name='name' value={form.name} onChange={handleform} />
+                  </div>
+                  <div className='input-element'>
+                    <div>Email:</div>
+                    <input className='input-width' type='text' name='email' value={form.email} onChange={handleform} />
+                  </div>
+                  <div className='input-element'>
+                    <div>Number:</div>
+                    <input className='input-width' type='number' name='number' value={form.number} onChange={handleform} />
+                  </div>
+                  <div className='btn'>
+                    <button type='submit' className='add-list btna1'>Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            </div>
+          )}
       <div className='home-page'>
         <button className='add-list' onClick={addElement}>Add List</button>
         <div className='border-1'>
@@ -67,29 +92,7 @@ const handleDelete = () => {
               </div>
             </div>
           ))}
-          {popup && (
-            <div className='popup'>
-              <form onSubmit={handleSubmit} >
-                <div className='border-2'>
-                  <div className='input-element'>
-                    <div>Name:</div>
-                    <input className='input-width' type='text' name='name' value={form.name} onChange={handleform} />
-                  </div>
-                  <div className='input-element'>
-                    <div>Email:</div>
-                    <input className='input-width' type='text' name='email' value={form.email} onChange={handleform} />
-                  </div>
-                  <div className='input-element'>
-                    <div>Number:</div>
-                    <input className='input-width' type='number' name='number' value={form.number} onChange={handleform} />
-                  </div>
-                  <div className='btn'>
-                    <button type='submit' className='add-list btna1'>Submit</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          )}
+          
         </div>
       </div>
     </>
