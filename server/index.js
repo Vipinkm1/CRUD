@@ -1,6 +1,11 @@
+
+//  import the neccessary part
+
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
+
+
 
 
 const app = express()
@@ -12,10 +17,11 @@ const PORT = process.env.PORT || 8080
 const userSchema = mongoose.Schema({
     name: String,
     email: String,
-    mobile: Number
+    mobile: String
 }, {
     timestamp: true
 })
+
 
 const userModel = mongoose.model('user', userSchema)
 
